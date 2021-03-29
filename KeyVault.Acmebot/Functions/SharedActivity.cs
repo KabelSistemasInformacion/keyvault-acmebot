@@ -169,7 +169,7 @@ namespace KeyVault.Acmebot.Functions
                 // 処理対象の DNS zone から取得した NS と実際に引いた NS の値が一つも一致しない場合はエラー
                 if (!actualNameServers.Intersect(expectedNameServers, StringComparer.OrdinalIgnoreCase).Any())
                 {
-                    throw new PreconditionException($"The delegated name server is not correct. DNS zone = {zone.Name}, Expected = {string.Join(",", expectedNameServers)}, Actual = {string.Join(",", actualNameServers)}");
+                    //throw new PreconditionException($"The delegated name server is not correct. DNS zone = {zone.Name}, Expected = {string.Join(",", expectedNameServers)}, Actual = {string.Join(",", actualNameServers)}");
                 }
             }
         }
